@@ -34,7 +34,7 @@ server.get("/",(req,res)=>
 })
 
 
-//location end
+//location end point
 server.get("/location",(req,res)=>
 {
 
@@ -45,7 +45,7 @@ server.get("/location",(req,res)=>
         res.send(result);
     })
 
-    console.log(location);
+    // console.log(location);
     // res.send(location)
 })
 
