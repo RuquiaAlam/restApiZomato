@@ -4,13 +4,14 @@ const mongo = require ("mongodb");
 const dotenv = require("dotenv").config();
 const cors = require("cors");//Cross-origin resource share
 const bodyParser = require("body-parser");
-
+server.use(cors());
+server.use(bodyParser.json());
 let db ;
 const MongoClient = mongo.MongoClient;
-server.use(cors());
+
 const MONGO_URL = "mongodb+srv://test:test@cluster0.mxlm7ff.mongodb.net/Restaurant-app"
 const PORT =process.env.PORT;
-server.use(bodyParser.json());
+
 
 
 
