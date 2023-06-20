@@ -8,7 +8,7 @@ const bodyParser = require("body-parser");
 let db ;
 const MongoClient = mongo.MongoClient;
 server.use(cors());
-const MONGO_URL = process.env.MONGO_URL;
+const MONGO_URL = "mongodb+srv://test:test@cluster0.mxlm7ff.mongodb.net/Restaurant-app"
 const PORT =process.env.PORT;
 server.use(bodyParser.json());
 
