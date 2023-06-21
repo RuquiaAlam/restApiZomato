@@ -106,7 +106,7 @@ server.get("/RestaurantonStateId",(req,res)=>
   let query = {};
   let stateId = Number(req.query.stateId);
 
-  if(state_id)
+  if(stateId)
   {
     query = {state_id : stateId}
   }
