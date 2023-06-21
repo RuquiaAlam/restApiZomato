@@ -108,7 +108,7 @@ server.get("/RestaurantonStateId",(req,res)=>
 
   if(stateId)
   {
-    query = {state_id:stateId}
+    query = {state_id : stateId}
   }
   db.collection("RestaurantData").find(query).toArray((err,result)=>
   {
