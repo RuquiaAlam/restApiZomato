@@ -70,13 +70,13 @@ res.send(result);
 server.get("/restaurants",function(req,res)
 {
 let query = {};
-let stateId = Number(req.query.stateId);
+let state_id = Number(req.query.state_id);
 let mealId  = Number(req.query.mealId);
 
 
  if(stateId)
 {
-    query = { state_id : stateId};
+    query = { state_id : state_id};
 }
 else if(mealId)
 {
@@ -104,11 +104,11 @@ server.get("/RestaurantonStateId",(req,res)=>
 {
 
   let query = {};
-  let stateId = Number(req.query.stateId);
+  let state_id = Number(req.query.state_id);
 
-  if(stateId)
+  if(state_id)
   {
-    query = {state_id : stateId}
+    query = {state_id : state_id}
   }
   db.collection("RestaurantData").find(query).toArray((err,result)=>
   {
