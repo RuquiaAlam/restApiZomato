@@ -104,11 +104,11 @@ server.get("/RestaurantonStateId",(req,res)=>
 {
 
   let query = {};
-  let state_id = Number(req.query.state_id);
+  let stateId = Number(req.query.stateId);
 
   if(state_id)
   {
-    query = {state_id : state_id}
+    query = {state_id : stateId}
   }
   db.collection("RestaurantData").find(query).toArray((err,result)=>
   {
