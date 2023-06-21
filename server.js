@@ -103,12 +103,12 @@ if(err) throw err;
 server.get("/RestaurantonStateId",(req,res)=>
 {
 
-  let query={};
+  let query = {};
   let stateId = Number(req.query.stateId);
 
   if(stateId)
   {
-    query={state_id:stateId}
+    query = {state_id:stateId}
   }
   db.collection("RestaurantData").find(query).toArray((err,result)=>
   {
